@@ -1,0 +1,30 @@
+.imageContainerCol {
+  background-image: url("../../public/images/contact-page-bg.jpg");
+
+  .mainTitleContainer {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: -1rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    .mainTitle {
+      font-family: "Lato", sans-serif;
+      //   font-style: normal;
+      font-weight: 900;
+    }
+  }
+}
+
+.sendEmailWrapper {
+  display: flex;
+  .arrow {
+    width: 64px;
+    height: 1px;
+  }
+}
+
+
