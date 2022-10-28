@@ -113,6 +113,7 @@ h1 {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  border-radius: 5px;
 }
 
 .content-col {
@@ -157,6 +158,7 @@ h1 {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  z-index: -1;
 }
 
 .leftSidebar .icon {

@@ -21,10 +21,16 @@
 
 .sendEmailWrapper {
   display: flex;
+  align-items: center;
+  margin: 1rem 0;
   .arrow {
     width: 64px;
     height: 1px;
   }
+  .leftText {
+    font-size: 1rem;
+  }
+  .rightText {
+  font-size: 1.25rem;
+  }
 }
-
-

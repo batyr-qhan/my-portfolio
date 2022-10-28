@@ -11,7 +11,9 @@ export default function Navbar() {
       <div></div>
       <div></div>
       <div></div>
-      <div>work</div>
+      <div className={classes.navItem}>
+        <Link href="/work">work</Link>
+      </div>
       <div className={classes.navItem}>
         <Link href="/contact">contact</Link>
       </div>

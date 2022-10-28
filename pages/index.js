@@ -29,7 +29,7 @@ export default function Home() {
           </p>
           <p className="content-col__text inconsolata-normal">
             Proficient in JavaScript, TypeScript, React, CSS, and more other web
-            related tools. Quality work, flexible communication.
+            related tools.
           </p>
           <div className="content-col__title-container">
             <span className="content-col__title droid-sans-bold">
@@ -45,7 +45,7 @@ export default function Home() {
             <span className={styles.skillsItem}>#NEXT.JS</span>
           </div>
           <div className={styles.viewExperience}>
-            <span>
+            <span className={styles.viewExperience__text}>
               <Link
                 href="/experience
               "
@@ -55,13 +55,9 @@ export default function Home() {
             </span>
 
             <div className={styles.iconArrowContainer}>
-              <div
-                className={styles.iconArrow}
-             
-              ></div>
+              <div className={styles.arrowLeft}></div>
+              <div className={styles.iconArrow}></div>
             </div>
-
-            {/* <Image alt="arrow logo" /> */}
           </div>
         </div>
         <div></div>

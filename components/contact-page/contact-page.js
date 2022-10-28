@@ -13,14 +13,15 @@ export default function ContactPage() {
         <div className="content-col__title-container">
           <span className="content-col__title droid-sans-bold">CONTACT ME</span>
         </div>
-        <p className="content-col__text inconsolata-normal">
-          Proficient in JavaScript, TypeScript, React, CSS, and more other web
-          related tools. Quality work, flexible communication.
-        </p>
+
         <div className={styles.sendEmailWrapper}>
-          <span>send email</span>
+          <span className={`droid-sans-normal ${styles.leftText}`}>
+            send email
+          </span>
           <span className={styles.arrow}></span>
-          <span>zhbatyrkhan@gmail.com</span>
+          <span className={`droid-sans-normal ${styles.rightText}`}>
+            zhbatyrkhan@gmail.com
+          </span>
         </div>
       </div>
       <div></div>
