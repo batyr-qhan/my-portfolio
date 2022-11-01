@@ -8,9 +8,9 @@ export default function Layout({ children }) {
     <>
       <div className="overlay">
         <div className="black-bg leftSidebar">
-          <FaGithub size="1.5rem" className="icon" />
+          {/* <FaGithub size="1.5rem" className="icon" />
           <FaLinkedin size="1.5rem" className="icon" />
-          <FaTwitter size="1.5rem" className="icon" />
+          <FaTwitter size="1.5rem" className="icon" /> */}
         </div>
         <div className="black-bg"></div>
         <div className="black-bg"></div>

@@ -3,6 +3,7 @@ import styles from "./work-page.module.scss";
 
 export default function WorkPage() {
   return (
+    // TODO: remove useless empty divs and fix styling so left column can be used
     <div className="container">
       <div className={`image-col ${styles.imageContainerCol}`}>
         <div className={styles.mainTitleContainer}>

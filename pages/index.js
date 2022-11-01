@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.scss";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -13,7 +14,25 @@ export default function Home() {
       </Head>
 
       <main className="container">
-        <div className={styles.leftSidebarCol}></div>
+        <div className={styles.leftSidebarCol}>
+          <Link href="https://github.com/batyr-qhan" passHref>
+            <a target="_blank">
+              <FaGithub
+                size="1.5rem"
+                className={styles.icon}
+                onClick={() => {}}
+              />
+            </a>
+          </Link>
+
+          <Link href="https://www.linkedin.com/in/batyrqh/" passHref>
+            <a target="_blank">
+              <FaLinkedin size="1.5rem" className={styles.icon} />
+            </a>
+          </Link>
+
+          {/* <FaTwitter size="1.5rem" className={styles.icon} /> */}
+        </div>
         <div className={`image-col ${styles.imageContainerCol}`}>
           <div className={styles.mainTitleContainer}>
             <h1 className={styles.mainTitle}>hi there</h1>
@@ -25,10 +44,10 @@ export default function Home() {
             <span className="content-col__title droid-sans-bold">ABOUT ME</span>
           </div>
           <p className="content-col__subtitle inconsolata-bold">
-            Im a frontend developer who enjoys creating cool things
+            Im a frontend and React Native developer who enjoys creating cool things
           </p>
           <p className="content-col__text inconsolata-normal">
-            Proficient in JavaScript, TypeScript, React, CSS, and more other web
+            Proficient in JavaScript, TypeScript, React, CSS, Expo, and more other web and mobile
             related tools.
           </p>
           <div className="content-col__title-container">
