@@ -12,10 +12,16 @@ export default function Navbar() {
       <div></div>
       <div></div>
       <div className={classes.navItem}>
-        <Link href="/work">work</Link>
+        <div className={classes.navItemContent}>
+          <Link href="/work">work</Link>
+          <Link href="/work">work</Link>
+        </div>
       </div>
       <div className={classes.navItem}>
-        <Link href="/contact">contact</Link>
+        <div className={classes.navItemContent}>
+          <Link href="/contact">contact</Link>
+          <Link href="/contact">contact</Link>
+        </div>
       </div>
       <div></div>
     </div>

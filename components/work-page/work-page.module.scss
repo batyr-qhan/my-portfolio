@@ -1,3 +1,14 @@
+.leftSidebarCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  .icon {
+    margin-bottom: 2rem;
+    cursor: pointer;
+  }
+}
+
 .imageContainerCol {
   background-image: url("../../public/images/loginScreen.png");
 

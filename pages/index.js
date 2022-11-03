@@ -44,11 +44,12 @@ export default function Home() {
             <span className="content-col__title droid-sans-bold">ABOUT ME</span>
           </div>
           <p className="content-col__subtitle inconsolata-bold">
-            Im a frontend and React Native developer who enjoys creating cool things
+            Im a frontend and React Native developer who enjoys creating cool
+            things
           </p>
           <p className="content-col__text inconsolata-normal">
-            Proficient in JavaScript, TypeScript, React, CSS, Expo, and more other web and mobile
-            related tools.
+            Proficient in JavaScript, TypeScript, React, CSS, Expo, and more
+            other web and mobile related tools.
           </p>
           <div className="content-col__title-container">
             <span className="content-col__title droid-sans-bold">
@@ -79,15 +80,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
         <div></div>
       </main>
 

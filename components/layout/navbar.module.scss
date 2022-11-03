@@ -7,8 +7,18 @@
   font-size: 0.875rem;
 }
 
-.navItem:hover {
-  transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)
-    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-  transform-style: preserve-3d;
+.navItem {
+  height: 20px;
+  overflow: hidden;
+
+  .navItemContent {
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.1s ease-in-out;
+
+    &:hover {
+      transform: translate3d(0, -45%, 0);
+    }
+  }
 }

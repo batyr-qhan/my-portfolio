@@ -1,10 +1,30 @@
 import Link from "next/link";
 import styles from "./work-page.module.scss";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 export default function WorkPage() {
   return (
     // TODO: remove useless empty divs and fix styling so left column can be used
     <div className="container">
+      <div className={styles.leftSidebarCol}>
+        <Link href="https://github.com/batyr-qhan" passHref>
+          <a target="_blank">
+            <FaGithub
+              size="1.5rem"
+              className={styles.icon}
+              onClick={() => {}}
+            />
+          </a>
+        </Link>
+
+        <Link href="https://www.linkedin.com/in/batyrqh/" passHref>
+          <a target="_blank">
+            <FaLinkedin size="1.5rem" className={styles.icon} />
+          </a>
+        </Link>
+
+        {/* <FaTwitter size="1.5rem" className={styles.icon} /> */}
+      </div>
       <div className={`image-col ${styles.imageContainerCol}`}>
         <div className={styles.mainTitleContainer}>
           <h1 className={styles.mainTitle}>certificates project</h1>
@@ -59,15 +79,6 @@ export default function WorkPage() {
         </div>
       </div>
       <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      {/* experience-page */}
     </div>
   );
 }
