@@ -1,7 +1,6 @@
 import Navbar from "./navbar";
 import Footer from "./footer";
 import Head from "next/head";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 export default function Layout({ children }) {
   return (

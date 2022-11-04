@@ -3,8 +3,18 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.scss";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
+
+import { useState } from "react";
 
 export default function Home() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const imageRefs = [
+    "/images/mainScreenPhoto1.JPG",
+    "/images/mainScreenPhoto2.JPG",
+  ];
+
   return (
     <>
       <Head>
@@ -30,12 +40,47 @@ export default function Home() {
               <FaLinkedin size="1.5rem" className={styles.icon} />
             </a>
           </Link>
-
-          {/* <FaTwitter size="1.5rem" className={styles.icon} /> */}
         </div>
         <div className={`image-col ${styles.imageContainerCol}`}>
+          <Image
+            alt="eoiwruiwoe"
+            objectFit="cover"
+            layout="fill"
+            src={imageRefs[currentSlide]}
+            style={{ borderRadius: 5 }}
+          />
           <div className={styles.mainTitleContainer}>
             <h1 className={styles.mainTitle}>hi there</h1>
+          </div>
+          <div className={styles.buttonsWrapper}>
+            <button
+              className={styles.buttonContainer}
+              onClick={() => {
+                if (currentSlide > 0) {
+                  setCurrentSlide((prevState) => prevState - 1);
+                }
+              }}
+            >
+              <AiOutlineLeft
+                size={40}
+                color="black"
+                className={styles.leftArrow}
+              />
+            </button>
+            <button
+              className={styles.buttonContainer}
+              onClick={() => {
+                if (currentSlide < imageRefs.length - 1) {
+                  setCurrentSlide((prevState) => prevState + 1);
+                }
+              }}
+            >
+              <AiOutlineRight
+                size={40}
+                color="black"
+                className={styles.rightArrow}
+              />
+            </button>
           </div>
         </div>
         <div></div>
