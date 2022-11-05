@@ -1,31 +1,19 @@
-import Link from "next/link";
-import styles from "./work-page.module.scss";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import styles from "./project-one-page.module.scss";
+import ProjectPageLayout from "../../layout/projectPageLayout";
+import Image from "next/image";
 
-export default function WorkPage() {
+export default function ProjectOnePage() {
   return (
-    // TODO: remove useless empty divs and fix styling so left column can be used
-    <div className="container">
-      <div className={styles.leftSidebarCol}>
-        <Link href="https://github.com/batyr-qhan" passHref>
-          <a target="_blank">
-            <FaGithub
-              size="1.5rem"
-              className={styles.icon}
-              onClick={() => {}}
-            />
-          </a>
-        </Link>
-
-        <Link href="https://www.linkedin.com/in/batyrqh/" passHref>
-          <a target="_blank">
-            <FaLinkedin size="1.5rem" className={styles.icon} />
-          </a>
-        </Link>
-
-        {/* <FaTwitter size="1.5rem" className={styles.icon} /> */}
-      </div>
+    <ProjectPageLayout>
       <div className={`image-col ${styles.imageContainerCol}`}>
+        <Image
+          alt="main photo"
+          objectFit="cover"
+          layout="fill"
+          src={"/images/loginScreen.png"}
+          style={{ borderRadius: 5 }}
+        />
+
         <div className={styles.mainTitleContainer}>
           <h1 className={styles.mainTitle}>certificates project</h1>
         </div>
@@ -78,7 +66,6 @@ export default function WorkPage() {
           </div>
         </div>
       </div>
-      <div></div>
-    </div>
+    </ProjectPageLayout>
   );
 }

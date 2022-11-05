@@ -1,17 +1,4 @@
-.leftSidebarCol {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  .icon {
-    margin-bottom: 2rem;
-    cursor: pointer;
-  }
-}
-
 .imageContainerCol {
-  background-image: url("../../public/images/loginScreen.png");
-
   &:after {
     transition: all 0.5s linear;
     position: absolute;
@@ -51,22 +38,6 @@
       //   font-style: normal;
       font-weight: 900;
     }
-  }
-}
-
-.sendEmailWrapper {
-  display: flex;
-  align-items: center;
-  margin: 1rem 0;
-  .arrow {
-    width: 64px;
-    height: 1px;
-  }
-  .leftText {
-    font-size: 1rem;
-  }
-  .rightText {
-    font-size: 1.25rem;
   }
 }
 

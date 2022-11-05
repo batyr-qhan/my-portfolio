@@ -13,8 +13,8 @@ export default function Navbar() {
       <div></div>
       <div className={classes.navItem}>
         <div className={classes.navItemContent}>
-          <Link href="/work">work</Link>
-          <Link href="/work">work</Link>
+          <Link href="/works/project-1">work</Link>
+          <Link href="/works/project-1">work</Link>
         </div>
       </div>
       <div className={classes.navItem}>
