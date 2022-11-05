@@ -9,10 +9,17 @@ import { useState } from "react";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [testimonialsCurrSlide, setTestimonialsCurrSlide] = useState(0);
 
   const imageRefs = [
     "/images/mainScreenPhoto1.JPG",
     "/images/mainScreenPhoto2.JPG",
+  ];
+
+  const testimonialsImg = [
+    "/images/testimonials1.png",
+    "/images/testimonials2.png",
+    "/images/testimonials3.png",
   ];
 
   return (
@@ -54,32 +61,25 @@ export default function Home() {
           </div>
           <div className={styles.buttonsWrapper}>
             <button
-              className={styles.buttonContainer}
+              className={styles.btnWrapper__left}
               onClick={() => {
                 if (currentSlide > 0) {
                   setCurrentSlide((prevState) => prevState - 1);
                 }
               }}
             >
-              <AiOutlineLeft
-                size={40}
-                color="black"
-                className={styles.leftArrow}
-              />
+              <i className={styles.arrow__left}></i>
             </button>
+
             <button
-              className={styles.buttonContainer}
+              className={styles.btnWrapper__right}
               onClick={() => {
                 if (currentSlide < imageRefs.length - 1) {
                   setCurrentSlide((prevState) => prevState + 1);
                 }
               }}
             >
-              <AiOutlineRight
-                size={40}
-                color="black"
-                className={styles.rightArrow}
-              />
+              <i className={styles.arrow__right}></i>
             </button>
           </div>
         </div>
@@ -96,6 +96,37 @@ export default function Home() {
             Proficient in JavaScript, TypeScript, React, CSS, Expo, and more
             other web and mobile related tools.
           </p>
+          {/* <div className="content-col__title-container">
+            <span className="content-col__title droid-sans-bold">
+              TESTIMONIALS:{" "}
+            </span>
+          </div>
+          <div className={styles.testimonialsContainer}>
+            <button
+              className={styles.buttonContainer}
+              style={{ zIndex: 10 }}
+              onClick={() => {}}
+            >
+              <AiOutlineLeft
+                size={40}
+                color="white"
+                className={styles.leftArrow}
+              />
+            </button>
+            <Image
+              alt="testimonials"
+              objectFit="contain"
+              layout="fill"
+              src={testimonialsImg[0]}
+            />
+            <button className={styles.buttonContainer} onClick={() => {}}>
+              <AiOutlineRight
+                size={40}
+                color="white"
+                className={styles.rightArrow}
+              />
+            </button>
+          </div> */}
           <div className="content-col__title-container">
             <span className="content-col__title droid-sans-bold">
               SKILLS & SERVICES:{" "}

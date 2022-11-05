@@ -9,6 +9,50 @@
   }
 }
 
+.buttonContainer {
+  background: transparent;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(246, 139, 157, 0.15);
+  // position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .arrowLeft {
+    width: 20px;
+    height: 20px;
+
+    box-shadow: -2px 2px 0 white;
+    transform: rotate(225deg);
+  }
+
+  .leftArrow {
+    transition: transform 0.2s ease-in-out;
+    transform: translate3d(0, 0, 0);
+  }
+
+  &:hover {
+    .leftArrow {
+      transition: transform 0.2s ease-in-out;
+      transform: translate3d(-5px, 0, 0);
+    }
+  }
+
+  .rightArrow {
+    transition: transform 0.2s ease-in-out;
+    transform: translate3d(0, 0, 0);
+  }
+
+  &:hover {
+    .rightArrow {
+      transition: transform 0.2s ease-in-out;
+      transform: translate3d(5px, 0, 0);
+    }
+  }
+}
+
 .imageContainerCol {
   position: relative;
 
@@ -44,52 +88,6 @@
       font-style: normal;
     }
   }
-
-  .buttonsWrapper {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 10;
-    // background-color: green;
-    height: 100px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
-
-    .buttonContainer {
-      background: transparent;
-      cursor: pointer;
-      width: 40px;
-      height: 40px;
-      border: 1px solid rgba(246, 139, 157, 0.15);
-
-      .leftArrow {
-        transition: transform 0.2s ease-in-out;
-        transform: translate3d(0, 0, 0);
-      }
-
-      &:hover {
-        .leftArrow {
-          transition: transform 0.2s ease-in-out;
-          transform: translate3d(-5px, 0, 0);
-        }
-      }
-
-      .rightArrow {
-        transition: transform 0.2s ease-in-out;
-        transform: translate3d(0, 0, 0);
-      }
-
-      &:hover {
-        .rightArrow {
-          transition: transform 0.2s ease-in-out;
-          transform: translate3d(5px, 0, 0);
-        }
-      }
-    }
-  }
 }
 
 .textSection {
@@ -108,6 +106,19 @@
   border-bottom: 1px solid rgba(246, 139, 157, 0.5);
   padding: 1rem 0;
   letter-spacing: 1px;
+}
+
+.testimonialsContainer {
+  position: relative;
+  height: 100px;
+  // width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+  // padding: 5px 0;
+  // width: 100px;
+  // height: 100px;
 }
 
 .skillsContainer {
@@ -235,22 +246,69 @@
   }
 }
 
-// @media (max-width: 600px) {
-//   .grid {
-//     width: 100%;
-//     flex-direction: column;
-//   }
-// }
+.buttonsWrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  // background-color: green;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
 
-// @media (prefers-color-scheme: dark) {
-//   .card,
-//   .footer {
-//     border-color: #222;
-//   }
-//   .code {
-//     background: #111;
-//   }
-//   .logo img {
-//     filter: invert(1);
-//   }
-// }
+.btnWrapper__left,
+.btnWrapper__right {
+  // background-color: green;
+  background-color: transparent;
+  height: 40px;
+  width: 40px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(246, 139, 157, 0.5);
+
+  .arrow__right,
+  .arrow__left {
+    border: solid white;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    height: 50%;
+    width: 50%;
+  }
+
+  .arrow__right {
+    transform: translateX(-5px) rotate(-45deg);
+    -webkit-transform: translateX(-5px) rotate(-45deg);
+    transition: transform 0.1s ease-in-out;
+  }
+  .arrow__left {
+    transform: translateX(5px)  rotate(135deg);
+    -webkit-transform: translateX(5px) rotate(135deg);
+    transition: transform 0.1s ease-in-out;
+  }
+}
+
+.btnWrapper__left {
+  &:hover {
+    .arrow__left {
+      transform: translateX(-20%) rotate(135deg);
+      // transform: rotate(135deg);
+    }
+  }
+}
+
+.btnWrapper__right {
+  &:hover {
+    .arrow__right {
+      transform: translateX(20%) rotate(-45deg);
+      // transform: rotate(135deg);
+    }
+  }
+}
