@@ -50,7 +50,7 @@ export default function Home() {
         </div>
         <div className={`image-col ${styles.imageContainerCol}`}>
           <Image
-            alt="eoiwruiwoe"
+            alt="main photo"
             objectFit="cover"
             layout="fill"
             src={imageRefs[currentSlide]}
