@@ -5,8 +5,11 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  .icon {
+  .iconContainer {
     margin-bottom: 2rem;
+  }
+  .icon {
+    // margin-bottom: 2rem;
     cursor: pointer;
   }
 }

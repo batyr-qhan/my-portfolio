@@ -7,6 +7,8 @@ import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
 import { useState, useTransition } from "react";
 import Modal from "../components/Modal/Modal";
 
+import { motion } from "framer-motion";
+
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   // const [testimonialsCurrSlide, setTestimonialsCurrSlide] = useState(0);
@@ -66,18 +68,30 @@ export default function Home() {
       <main className="container">
         <div className={styles.leftSidebarCol}>
           <Link href="https://github.com/batyr-qhan" passHref>
-            <a target="_blank">
-              <FaGithub
-                size="1.5rem"
-                className={styles.icon}
-                onClick={() => {}}
-              />
+            <a target="_blank" className={styles.iconContainer}>
+              <motion.div
+                whileHover={{
+                  translateY: -5,
+                }}
+              >
+                <FaGithub
+                  size="1.5rem"
+                  className={styles.icon}
+                  onClick={() => {}}
+                />
+              </motion.div>
             </a>
           </Link>
 
           <Link href="https://www.linkedin.com/in/batyrqh/" passHref>
-            <a target="_blank">
-              <FaLinkedin size="1.5rem" className={styles.icon} />
+            <a target="_blank" className={styles.iconContainer}>
+              <motion.div
+                whileHover={{
+                  translateY: -5,
+                }}
+              >
+                <FaLinkedin size="1.5rem" className={styles.icon} />
+              </motion.div>
             </a>
           </Link>
         </div>
@@ -174,19 +188,26 @@ export default function Home() {
             <span className={styles.skillsItem}>#NEXT.JS</span>
           </div>
           <div className={styles.viewExperience}>
-            <div
-              className={styles.columnContent}
-              onClick={() => {
-                setShowModal(true);
+            <motion.div
+              whileHover={{
+                scale: 1.1,
               }}
+              whileTap={{ scale: 1 }}
             >
-              <span>RESUME</span>
+              <div
+                className={styles.columnContent}
+                onClick={() => {
+                  setShowModal(true);
+                }}
+              >
+                <span>RESUME</span>
 
-              <div className={styles.iconArrowContainer}>
-                <div className={styles.arrowLeft}></div>
-                <div className={styles.iconArrow}></div>
+                <div className={styles.iconArrowContainer}>
+                  <div className={styles.arrowLeft}></div>
+                  <div className={styles.iconArrow}></div>
+                </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
         <div></div>
