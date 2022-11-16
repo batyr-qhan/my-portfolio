@@ -11,6 +11,11 @@
   height: 20px;
   overflow: hidden;
   display: flex;
+  justify-content: space-between;
+
+  .navItemButton {
+    border: 1px solid red;
+  }
 
   .navItemContent {
     height: 40px;

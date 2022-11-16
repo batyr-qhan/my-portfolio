@@ -1,0 +1,13 @@
+$primary-color: #64ff00;
+$image-overlay-purple: rgba(138, 43, 226, 0.5);
+$image-overlay-purple-almost-transparent: rgba(138, 43, 226, 0.3);
+
+$underscore-color: rgba(246, 139, 157, 0.5);
+$overlay-grid-border: hsla(0, 0%, 100%, 0.07);
+
+:export {
+  primaryColor: $primary-color;
+  imageOverlayPurpleColor: $image-overlay-purple;
+  underscoreColor: $underscore-color;
+  overlayGridBorder: $overlay-grid-border;
+}
