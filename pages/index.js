@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.scss";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { useContext, useState, useTransition } from "react";
+import { useContext, useEffect, useState, useTransition } from "react";
 import Modal from "../components/Modal/Modal";
 
 import { AnimatePresence, motion } from "framer-motion";
@@ -18,6 +18,17 @@ export default function Home() {
   const appCtx = useContext(AppContext);
 
   const { openFooter, isFooterOpen } = appCtx;
+
+  useEffect(() => {
+    const timeOut = setTimeout(() => {
+      openFooter();
+    }, 800);
+    return () => {
+      clearTimeout(timeOut);
+    };
+
+    //TODO: implement globally for other pages
+  }, []);
 
   const imageRefs = [
     "/images/mainScreenPhoto1.JPG",

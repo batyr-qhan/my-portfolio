@@ -1,20 +1,28 @@
-import { createContext, useState } from "react";
+import { useRouter } from "next/router";
+import { createContext, useEffect, useState } from "react";
 
 export const AppContext = createContext({
   isFooterOpen: true,
   openFooter: () => {},
+  closeFooter: () => {},
 });
 
 export default function AppContextProvider({ children }) {
-  const [isFooterOpen, setIsFooterOpen] = useState(true);
+  const [isFooterOpen, setIsFooterOpen] = useState(false);
+
+  //   const router = useRouter();
+
+  //   useEffect(() => {
+  //     setIsFooterOpen(true);
+  //   }, [router.asPath]);
 
   const handleOpen = () => {
     setIsFooterOpen(true);
   };
 
-  const handleClose =() => {
-    setIsFooterOpen(false)
-  }
+  const handleClose = () => {
+    setIsFooterOpen(false);
+  };
 
   const value = {
     isFooterOpen: isFooterOpen,
