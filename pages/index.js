@@ -3,17 +3,21 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.scss";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
-import { useState, useTransition } from "react";
+import { useContext, useState, useTransition } from "react";
 import Modal from "../components/Modal/Modal";
 
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { AppContext } from "../store/app-context";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   // const [testimonialsCurrSlide, setTestimonialsCurrSlide] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [modalCurrSlide, setModalCurrSlide] = useState(0);
+
+  const appCtx = useContext(AppContext);
+
+  const { openFooter, isFooterOpen } = appCtx;
 
   const imageRefs = [
     "/images/mainScreenPhoto1.JPG",
@@ -209,22 +213,31 @@ export default function Home() {
               </div>
             </motion.div>
           </div>
+          <div
+            style={{
+              position: "absolute",
+              bottom: "30px",
+            }}
+          >
+            <AnimatePresence>
+              {!isFooterOpen && (
+                <motion.button
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className={styles.btnWrapper__up}
+                  onClick={() => {
+                    openFooter();
+                  }}
+                >
+                  <i className={styles.arrow__up}></i>
+                </motion.button>
+              )}
+            </AnimatePresence>
+          </div>
         </div>
         <div></div>
       </main>
-
-      {/* <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer> */}
     </>
   );
 }
