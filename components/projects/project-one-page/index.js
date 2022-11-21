@@ -1,6 +1,7 @@
 import styles from "./project-one-page.module.scss";
 import ProjectPageLayout from "../../layout/projectPageLayout";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function ProjectOnePage() {
   return (
@@ -19,7 +20,17 @@ export default function ProjectOnePage() {
         </div>
       </div>
       <div></div>
-      <div className="content-col">
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        animate={{ opacity: 1 }}
+        transition={{
+          delay: 2,
+          duration: 1,
+        }}
+        className="content-col"
+      >
         <div className="content-col__title-container">
           <span className="content-col__title droid-sans-bold">
             PROJECT NAME
@@ -65,7 +76,7 @@ export default function ProjectOnePage() {
             <div className={styles.iconArrow}></div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </ProjectPageLayout>
   );
 }

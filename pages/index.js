@@ -8,6 +8,7 @@ import { useContext, useEffect, useState, useTransition } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { AppContext } from "../store/app-context";
 import MyModal from "../components/MyModal/MyModal";
+import LeftSidebar from "../components/LeftSidebar/LeftSidebar";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -99,7 +100,8 @@ export default function Home() {
       </AnimatePresence>
 
       <main className="container">
-        <div className={styles.leftSidebarCol}>
+        <LeftSidebar />
+        {/* <div className={styles.leftSidebarCol}>
           <Link href="https://github.com/batyr-qhan" passHref>
             <a target="_blank" className={styles.iconContainer}>
               <motion.div
@@ -127,8 +129,17 @@ export default function Home() {
               </motion.div>
             </a>
           </Link>
-        </div>
-        <div className={`image-col ${styles.imageContainerCol}`}>
+        </div> */}
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 2,
+          }}
+          className={`image-col ${styles.imageContainerCol}`}
+        >
           <Image
             alt="main photo"
             objectFit="cover"
@@ -162,9 +173,19 @@ export default function Home() {
               <i className={styles.arrow__right}></i>
             </button>
           </div>
-        </div>
+        </motion.div>
         <div></div>
-        <div className="content-col">
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{ opacity: 1 }}
+          transition={{
+            delay: 2,
+            duration: 1,
+          }}
+          className="content-col"
+        >
           <div className="content-col__title-container">
             <span className="content-col__title droid-sans-bold">ABOUT ME</span>
           </div>
@@ -261,7 +282,7 @@ export default function Home() {
               )}
             </AnimatePresence>
           </div>
-        </div>
+        </motion.div>
         <div></div>
       </main>
     </>

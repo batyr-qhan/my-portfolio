@@ -1,0 +1,13 @@
+.leftSidebarCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  .iconContainer {
+    margin-bottom: 2rem;
+  }
+  .icon {
+    // margin-bottom: 2rem;
+    cursor: pointer;
+  }
+}

@@ -15,19 +15,23 @@ export default function Footer() {
         <motion.div
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 50 }}
-          exit={{ opacity: 0, height: 0 }}
+          transition={{
+            delay: 2.7,
+          }}
+          exit={{
+            opacity: 0,
+            height: 0,
+            transition: {
+              delay: 0,
+            },
+          }}
           className={classes.container}
         >
           <div className={classes.content}>
             <span>
               handcrafted with 🔥 in the soul by <strong>Batyrkhan</strong>
             </span>
-            <a
-              onClick={() => {
-                closeFooter();
-              }}
-              className={classes.close}
-            ></a>
+            <a onClick={closeFooter} className={classes.close}></a>
           </div>
         </motion.div>
       )}

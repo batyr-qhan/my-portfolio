@@ -1,8 +1,10 @@
+import LeftSidebar from "../LeftSidebar/LeftSidebar";
 import styles from "./contact-page.module.scss";
 
 export default function ContactPage() {
   return (
     <div className="container">
+      <LeftSidebar />
       <div className={`image-col ${styles.imageContainerCol}`}>
         <div className={styles.mainTitleContainer}>
           <h1 className={styles.mainTitle}>contact</h1>
