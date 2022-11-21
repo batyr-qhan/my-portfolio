@@ -6,7 +6,17 @@ import { motion } from "framer-motion";
 export default function ProjectOnePage() {
   return (
     <ProjectPageLayout>
-      <div className={`image-col ${styles.imageContainerCol}`}>
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        animate={{ opacity: 1 }}
+        transition={{
+          delay: 2,
+          duration: 1,
+        }}
+        className={`image-col ${styles.imageContainerCol}`}
+      >
         <Image
           alt="main photo"
           objectFit="cover"
@@ -18,7 +28,7 @@ export default function ProjectOnePage() {
         <div className={styles.mainTitleContainer}>
           <h1 className={styles.mainTitle}>certificates project</h1>
         </div>
-      </div>
+      </motion.div>
       <div></div>
       <motion.div
         initial={{
