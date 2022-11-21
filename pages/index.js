@@ -136,7 +136,8 @@ export default function Home() {
           }}
           animate={{ opacity: 1 }}
           transition={{
-            duration: 2,
+            delay: 2,
+            duration: 1,
           }}
           className={`image-col ${styles.imageContainerCol}`}
         >
