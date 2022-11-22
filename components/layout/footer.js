@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import classes from "./footer.module.scss";
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -9,15 +9,24 @@ export default function Footer() {
 
   const { isFooterOpen, openFooter, closeFooter } = appCtx;
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      openFooter();
+    }, 2700);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
     <AnimatePresence>
       {isFooterOpen && (
         <motion.div
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 50 }}
-          transition={{
-            delay: 2.7,
-          }}
+          // transition={{
+          //   delay: 2.7,
+          // }}
           exit={{
             opacity: 0,
             height: 0,

@@ -20,17 +20,6 @@ export default function Home() {
 
   const { openFooter, isFooterOpen } = appCtx;
 
-  useEffect(() => {
-    const timeOut = setTimeout(() => {
-      openFooter();
-    }, 800);
-    return () => {
-      clearTimeout(timeOut);
-    };
-
-    //TODO: implement globally for other pages
-  }, []);
-
   const imageRefs = [
     "/images/mainScreenPhoto1.JPG",
     "/images/mainScreenPhoto2.JPG",
