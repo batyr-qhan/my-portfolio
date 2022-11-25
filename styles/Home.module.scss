@@ -151,7 +151,13 @@
     border-bottom: 1px solid variables.$overlay-grid-border;
     padding: 10px 0;
     cursor: pointer;
-    opacity: 0.6;
+    background-color: transparent;
+    outline: none;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    font-family: "Droid-Sans", sans-serif;
+    // opacity: 0.6;
     // background-color: variables.$image-overlay-purple-almost-transparent;
 
     // &:hover {
