@@ -90,35 +90,6 @@ export default function Home() {
 
       <main className="container">
         <LeftSidebar />
-        {/* <div className={styles.leftSidebarCol}>
-          <Link href="https://github.com/batyr-qhan" passHref>
-            <a target="_blank" className={styles.iconContainer}>
-              <motion.div
-                whileHover={{
-                  translateY: -5,
-                }}
-              >
-                <FaGithub
-                  size="1.5rem"
-                  className={styles.icon}
-                  onClick={() => {}}
-                />
-              </motion.div>
-            </a>
-          </Link>
-
-          <Link href="https://www.linkedin.com/in/batyrqh/" passHref>
-            <a target="_blank" className={styles.iconContainer}>
-              <motion.div
-                whileHover={{
-                  translateY: -5,
-                }}
-              >
-                <FaLinkedin size="1.5rem" className={styles.icon} />
-              </motion.div>
-            </a>
-          </Link>
-        </div> */}
         <motion.div
           initial={{
             opacity: 0,
@@ -187,37 +158,7 @@ export default function Home() {
             Proficient in JavaScript, TypeScript, React, CSS, Expo, and more
             other web and mobile related tools.
           </p>
-          {/* <div className="content-col__title-container">
-            <span className="content-col__title droid-sans-bold">
-              TESTIMONIALS:{" "}
-            </span>
-          </div>
-          <div className={styles.testimonialsContainer}>
-            <button
-              className={styles.buttonContainer}
-              style={{ zIndex: 10 }}
-              onClick={() => {}}
-            >
-              <AiOutlineLeft
-                size={40}
-                color="white"
-                className={styles.leftArrow}
-              />
-            </button>
-            <Image
-              alt="testimonials"
-              objectFit="contain"
-              layout="fill"
-              src={testimonialsImg[0]}
-            />
-            <button className={styles.buttonContainer} onClick={() => {}}>
-              <AiOutlineRight
-                size={40}
-                color="white"
-                className={styles.rightArrow}
-              />
-            </button>
-          </div> */}
+
           <div className="content-col__title-container">
             <span className="content-col__title droid-sans-bold">
               SKILLS & SERVICES:{" "}
@@ -242,7 +183,7 @@ export default function Home() {
                 setShowModal(true);
               }}
             >
-              <span>RESUME</span>
+              <span className="droid-sans-bold">Resume</span>
 
               <div className={styles.iconArrowContainer}>
                 <div className={styles.arrowLeft}></div>

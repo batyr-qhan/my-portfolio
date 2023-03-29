@@ -34,8 +34,8 @@ export default function Navbar() {
         className={classes.navItem}
       >
         <div className={classes.navItemContent}>
-          <Link href="/works/project-1">work</Link>
-          <Link href="/works/project-1">work</Link>
+          <Link href="/works/certmate">works</Link>
+          <Link href="/works/certmate">works</Link>
         </div>
       </motion.div>
       <motion.div

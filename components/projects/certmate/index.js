@@ -3,7 +3,7 @@ import ProjectPageLayout from "../../layout/projectPageLayout";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-export default function ProjectOnePage() {
+export default function CertMatePage() {
   return (
     <ProjectPageLayout>
       <motion.div
@@ -26,7 +26,7 @@ export default function ProjectOnePage() {
         />
 
         <div className={styles.mainTitleContainer}>
-          <h1 className={styles.mainTitle}>certificates project</h1>
+          <h1 className={styles.mainTitle}>CertMate</h1>
         </div>
       </motion.div>
       <div></div>
@@ -47,7 +47,7 @@ export default function ProjectOnePage() {
           </span>
         </div>
         <p className="content-col__subtitle inconsolata-bold">
-          Certificates Project
+          CertMate
         </p>
         <div className="content-col__title-container">
           <span className="content-col__title droid-sans-bold">
