@@ -21,11 +21,11 @@ export default function Home() {
   const { openFooter, isFooterOpen } = appCtx;
 
   const imageRefs = [
-    "/images/mainScreenPhoto1.JPG",
-    "/images/mainScreenPhoto2.JPG",
+    "/images/mainScreenPhoto1.webp",
+    "/images/mainScreenPhoto2.webp",
   ];
 
-  const resumeImagePaths = ["/images/my_cv_png.png", "/images/my_cv_png2.png"];
+  const resumeImagePaths = ["/images/my_cv_png.webp", "/images/my_cv_png2.webp"];
 
   return (
     <>
